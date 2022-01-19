@@ -1,0 +1,224 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    background-image: url(./img/sylvain-sarrailh-tavern.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 35px;
+    color: whitesmoke;
+   
+}
+
+
+
+
+
+
+.contenedor{
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto) ;
+
+    grid-template-areas: "header header header"
+                        "contenido contenido sidebar"
+                        "tarjeta-1 tarjeta-2 sidebar"
+                        "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+    background: rgba(155, 152, 152, 0.76);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    background-color: rgba(255, 99, 71, 0.589);
+    grid-area: header;
+}
+
+h2{
+    padding-left: 10px;
+    padding: 10px;
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+}
+
+a{
+    flex-direction: row;
+    padding: 10px;
+    color: #ffff;
+    text-decoration: none;
+}
+
+
+.contenedor .sidebar{
+    background-image: url(./img/867cf494695801.5e851406073d9\(1\).jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    height: 620px;
+    grid-column: 3 / 4;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    min-height: 300px;
+    grid-row: 2 / 4;
+    grid-area: sidebar;
+}
+
+.contenedor .tarjeta-1,
+.contenedor .tarjeta-2 {
+    background-color:  rgba(255, 0, 0, 0.349);
+    height: 100px;
+    text-align: center;
+}
+
+.contenedor .tarjeta-1{
+    background-image: url(./img/aurelien-dunglas-midieval-building-01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: auto;
+    background-position-y: -100px;
+    height: 300px;
+    grid-area: tarjeta-1;
+}
+.contenedor .tarjeta-2{
+    background-image: url(./img/raquel-ribeiro-kitchen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -50px;
+    background-position-y: 0px;
+    height: 300px;
+    grid-area: tarjeta-2;
+}
+
+
+
+.contenedor .footer {
+    background-color: rgba(31, 10, 10, 0.082);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+
+
+
+
+/*Responvie celulares*/
+@media screen and (max-width: 765px){
+    .contenedor {
+        grid-template-areas: "header header header"
+        "contenido contenido sidebar"
+        "tarjeta-1 tarjeta-2 tarjeta-2"
+        "footer footer footer";
+
+    }
+    .contenedor .sidebar{
+        background-size: cover;
+        height: 750px;
+        
+    }
+
+    .contenedor .contenido{
+        max-height: 800px;
+    }
+
+    .contenedor .tarjeta-1 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -50px;
+        background-position-y: 0px;
+        height: 200px;
+        
+    }
+
+    .contenedor .tarjeta-2 {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position-x: -50px;
+        background-position-y: 0px;
+        height: 200px;
+    }
+    }
+
+
+
+
+
+    /*Pagina de cursos*/
+
+.fondo-cursos {
+        height: auto;
+        background-image: url(./img/sylvain-sarrailh-tavern.jpg);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        color: whitesmoke;
+    }
+
+
+
+
+.table {
+        background-color: rgb(10, 9, 9);
+        
+    }
+    
+.row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background-color:rgba(107, 42, 42, 0.507);
+    }
+    
+.row:hover {
+        background-color: rgba(61, 13, 25, 0.904);
+    }
+    
+  
+    
+.title {
+        display: flex;
+        justify-content: center;
+        background-color: #352525;
+    }
+    
+.header .row {
+        padding: 10px;
+        background-color: rgb(139, 56, 56);
+    }
+    
+.header .row div {
+        display: flex;
+        justify-content: center;
+        font-weight: 800px;
+        color: rgb(206, 203, 203);
+    }
+    
+.body .row {
+        padding: 30px;
+        
+    }
+
+        
+.body .row div {
+    display: flex;
+    justify-content: center;
+}
